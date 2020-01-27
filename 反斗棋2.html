@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>反斗棋</title>
+    <script>
+        window.onload = function(){
+            var oCen = document.getElementById('cen')
+            var oTa = document.getElementById('ta')
+            var iB = 0
+            var iNum = 0
+            var sWhite = 'rgb(255, 255, 255)'
+            var sBlack = 'rgb(0, 0, 0)'
+//定义数组
+            var aBtn = []
+            for(i = 0;i<5;i++){
+                aBtn[i] = []
+                for(j = 0;j<5;j++){
+                    aBtn[i][j] = document.createElement('li')
+                    aBtn[i][j].innerText = 'x:'+i + ' y:' + j
+                    aBtn[i][j].setAttribute('x',i)
+                    aBtn[i][j].setAttribute('y',j)
+                    aBtn[i][j].setAttribute('z',0)
+    //2为每个块添加监听，获取其自定义x y 的属性值
+                    aBtn[i][j].addEventListener('click',function(){
+                        var ix = parseInt(this.getAttribute('x')) 
+                        var iy = parseInt(this.getAttribute('y')) 
+    //为点中块及其周边块反转颜色                        
+                        if(iB === 0){
+                                iB = 1
+                                fnTurn(ix,iy)
+                                if(ix < 4) fnTurn(ix+1,iy)
+                                if(ix > 0) fnTurn(ix-1,iy)
+                                if(iy < 4) fnTurn(ix,iy+1)
+                                if(iy > 0) fnTurn(ix,iy-1)
+                                if(iNum === 25) alert('恭喜您，已通关！')
+                                iB = 0
+                            }
+
+                    })
+                    oTa.appendChild(aBtn[i][j])
+                }
+            }//for i
+//反转颜色函数
+            function fnTurn(ix,iy){
+                let iZ = parseInt(aBtn[ix][iy].getAttribute('z'))
+                if(iZ === 1){
+                    aBtn[ix][iy].style.backgroundColor = sBlack
+                    aBtn[ix][iy].setAttribute('z',0)
+                    iNum--
+                }
+                else if(iZ === 0){
+                    aBtn[ix][iy].style.backgroundColor = sWhite
+                    aBtn[ix][iy].setAttribute('z',1)
+                    iNum++
+                }
+            }//turn 
+        }//onload
+    
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            text-align: center;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgb(8, 8, 71),black);
+        }
+        .cen{
+            width: 600px;
+            /* height: 600px; */
+            background: rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+        .cen::after,.cen::before{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(to top right
+            ,rgb(70, 140, 115)
+            ,rgba(70, 140, 115,0.5)
+            ,rgba(0, 0, 0,0)
+            ,rgba(166, 28, 28,0.5)
+            ,rgb(166, 28, 28));
+            z-index: -1;
+        }
+        .cen::after{
+            filter: blur(40px);
+            z-index: -2;
+        }
+        .ta{
+            width: 600px;
+            /* height: 600px; */
+            overflow: hidden;
+        }
+        .ta li{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            color: green;
+            display: inline-block;
+            opacity: 0.5;
+            background-color: rgb(0, 0, 0);
+            margin: 10px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cen" id="cen">
+        <div class="ta" id="ta"></div>
+    </div>
+</body>
+</html>
