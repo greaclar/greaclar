@@ -16,7 +16,6 @@
                 aBtn[i] = []
                 for(j = 0;j<5;j++){
                     aBtn[i][j] = document.createElement('li')
-                    // aBtn[i][j].innerText = 'x:'+i + ' y:' + j
                     aBtn[i][j].innerHTML = '<p>.</p>'
                     aBtn[i][j].setAttribute('x',i)
                     aBtn[i][j].setAttribute('y',j)
@@ -57,10 +56,7 @@
                 }
             }//turn 
             ;(function(){
-            //封闭函数，获取屏幕大小，并动态给每个方块<li>内敛height赋值,让其 高 = 宽，当屏幕小于350px，高度维持70px
-                //当屏幕宽度少于600px，遍历方块，让它们宽度以百分比形式显示，高度动态赋值
                 fnTraverse()
-                //监听屏幕大小变化
                 window.addEventListener('resize',function(){
                     console.log('resize!')
                     fnTraverse()
@@ -77,19 +73,14 @@
                 }
 
                 function fnSquare(Obj){
-                    // var iDocHt = parseInt(document.documentElement.clientHeight)
                     var iW = getComputedStyle(Obj,null).getPropertyValue('width')
-                    // 屏幕小于350px时方块高度维持70px
                     var iWc = (parseInt(iW) >= 70) ? iW : '70px'
-                    // console.log(typeof(iW)+iWc) 
                     Obj.style.height = iWc
                     Obj.style.lineHeight = iWc
 
                 }
-            })()//封闭函数
-            
+            })()
         }//onload
-    
     </script>
     <style>
         * {
@@ -137,16 +128,11 @@
             overflow: hidden;
         }
         .ta li{
-            /* transform: scale(0.9,0.9); */
-            transform-origin: center center;
             position: relative;
             width: 100px;
             height: 100px;
             line-height: 100px;
             float: left;
-            /* display: inline-block; */
-            /* opacity: 0.4; */
-            /* background-color: rgba(0, 0, 0,0.4); */
             box-sizing: border-box;
             cursor: pointer;
             overflow: hidden;
@@ -157,7 +143,6 @@
             height: 100%;
             font-size: 20px;
         }
-
         .ta li[z = "0"] p{
             transform: scale(0.9,1);
             background-color: rgba(0, 0, 0,0.4);
@@ -180,11 +165,9 @@
             .cen{
                 width: 98%;
                 min-width: 300px;
-                /* 宽度最小60px */
             }
             .ta li{
                 width: 20%;
-                /* min-height: 70px; 不生效，内敛给height，会覆盖*/
             }
         }
     </style>
