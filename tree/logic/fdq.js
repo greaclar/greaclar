@@ -71,7 +71,7 @@ window.onload = function(){
             })()
             ;(function(){
                 let oTaiJi = document.getElementById('taiji')
-                   window.addEventListener('click',()=>{
+                   window.addEventListener('click',function(){
                    var iRotate = iNum*7 + 50
                 oTaiJi.style.transform = 'rotate('+iRotate+'deg)'
                 })
