@@ -69,4 +69,11 @@ window.onload = function(){
                     Obj.style.lineHeight = iWc
                 }
             })()
+            ;(function(){
+                let oTaiJi = document.getElementById('taiji')
+                   window.addEventListener('click',()=>{
+                   var iRotate = iNum*7 + 50
+                oTaiJi.style.transform = 'rotate('+iRotate+'deg)'
+                })
+            })()
         }//onload
