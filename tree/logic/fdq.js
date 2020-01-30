@@ -70,7 +70,7 @@ window.onload = function(){
                 }
             })()
             ;(function(){
-                // alert(2)
+                console.log(1)
                 let oTaiJi = document.getElementById('taiji')
                    window.addEventListener('click',function(){
                    var iRotate = iNum*7 + 50
