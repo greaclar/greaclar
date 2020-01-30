@@ -74,6 +74,7 @@ window.onload = function(){
                    window.addEventListener('click',function(){
                    var iRotate = iNum*7 + 50
                 oTaiJi.style.transform = 'rotate('+iRotate+'deg)'
+                alert(oTaiJi.style.transform)
                 })
             })()
         }//onload
