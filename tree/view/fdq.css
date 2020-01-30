@@ -37,6 +37,10 @@
             filter: blur(40px);
             z-index: -2;
         }
+            .incon{
+            overflow: hidden;
+            position: relative;
+        }
         .ta{
             position: relative;
             width:100%;
