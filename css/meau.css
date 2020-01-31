@@ -29,9 +29,8 @@ body{
     background: linear-gradient(to top right,
     #468C73
     ,#A61C1C);
-    filter: blur(40px);
+    filter: blur(0px);
     z-index: -2;
-
 }
 .con::before{
     content: '';
