@@ -20,6 +20,9 @@
             position: relative;
             overflow: hidden;
         }
+        [visible = "visible"]{
+            overflow: visible
+        }
         .cen::after,.cen::before{
             content: '';
             position: absolute;
