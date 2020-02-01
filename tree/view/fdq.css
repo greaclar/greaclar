@@ -18,6 +18,7 @@
             width: 500px;
             background: rgba(0, 0, 0, 0.5);
             position: relative;
+            overflow: hidden;
         }
         .cen::after,.cen::before{
             content: '';
