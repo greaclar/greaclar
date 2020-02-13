@@ -83,6 +83,7 @@ body{
     position: relative;
     padding: 16px 20px;
     margin: 4px 0;
+    font-size: 16px;
 }
 .selected a::before{
     content: '';
