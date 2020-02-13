@@ -100,5 +100,5 @@ body{
     opacity: 1;
 }
 .btn:target .selected{
-    max-height: 10em;
+    max-height: 30em;
 }
