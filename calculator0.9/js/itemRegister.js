@@ -39,11 +39,9 @@ function ItemRegister() {
 
     // 重写Stack类的push方法
     this.push = function (ele) {
-        // 限制输入最大长度为11个
+        
         console.log('will push ' + ele + ' to ' + stack.getItems())
-        if (stack.size() > 12) {
-            return;
-        }
+        
         // 当添加运算符数(整/小数/括号)后，标记typeIndex为对应的值
         if (isNaN(ele) && ele !== '.') {
             formatOperator(ele);
@@ -58,6 +56,10 @@ function ItemRegister() {
                     typeIndex = 1;
             }
         } else {
+            // 限制输入最大长度为13个,如果放在44行，过度输入后
+            if (stack.size() > 12) {
+                return false;
+            }
             formatNum(ele);
             typeIndex = (typeIndex === 4) ? 4 : 5;
         }
