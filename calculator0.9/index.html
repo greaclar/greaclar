@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>this is a calculator</title>
+    <title>calculator-version0.9</title>
     <link rel="stylesheet" href="./css/main.css">
-<!--    <link rel="stylesheet" href="./css/mediaSet.css">-->
 </head>
 
 
 <body>
     <div class="con">
         <div class="show">
-            <div class="fontsize"></div>
+            <!--<div class="fontsize"></div>-->
             <div class="history"></div>
             <div class="formula"></div>
             <div class="result"></div>
@@ -23,18 +22,17 @@
      <script src="./js/flexible.js"></script>
     <script src="./js/stack.js"></script>
     <script src="./js/compute.js"></script>
-<!--    <script src="笔记&代码归纳/formatinput.js"></script>-->
     <script src="js/itemRegister.js"></script>
     <script src="./js/main.js"></script>
 </body>
 <script>
-    const fontSiz = document.querySelector('.fontsize')
-    window.addEventListener('load',function (){
-        fontSiz.innerHTML = 'resize' + document.documentElement.offsetWidth
-    })
-    window.addEventListener('resize',function (){
-        fontSiz.innerHTML = 'resize' + document.documentElement.offsetWidth
-    })
+    // const fontSiz = document.querySelector('.fontsize')
+    // window.addEventListener('load',function (){
+    //     fontSiz.innerHTML = 'resize' + document.documentElement.offsetWidth
+    // })
+    // window.addEventListener('resize',function (){
+    //     fontSiz.innerHTML = 'resize' + document.documentElement.offsetWidth
+    // })
     // 只有当电脑打开，.con的宽度为10rem
     if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
     } else {
