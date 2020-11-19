@@ -183,7 +183,7 @@ li{
 
 /* 让被点击的.item-body在最大高度范围内，自适应撑开 */
 .item-body[flod = '1']{
-    transition: all 0.3s ease 70ms;
+    transition: all 0.3s ease 150ms;
     max-height: 100rem;
 }
 
