@@ -1,4 +1,5 @@
 window.addEventListener('load', function () {
+    // 获取元素
     const meau = document.querySelector('.meau');
     const itemHeads = meau.querySelectorAll('.item-head');
     const itemBodys = meau.querySelectorAll('.item-body');
