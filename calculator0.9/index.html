@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="greaclar-小龟壳、前端小项目展示、前端计算器" />
+    <meta name="description" content="greaclar-小龟壳，标准计算器的前端实现，可以进行简单的加、减、乘、除、求余、括号运算。用tofix()方法解决了js特有的小数精度问题。
+    简单修改了一下淘宝的flexible.js，适配电脑和手机页面。使用面向对象的编程思想，实现了栈，并进行后缀表达式的转换。同时也对用户输入进行了判断，纠正非法输入。
+    希望能与爱好前端的小伙伴一起学习交流，弄点更有意思的东西。-xust" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+
+    <link rel="shortcut icon" href="greater.svg" type="image/x-icon">
+    <title>计算器</title>
+</head>
+<body>
+    <div class="con">
+        <div class="show">
+            <div class="history"></div>
+            <div class="formula"></div>
+            <div class="result"></div>
+        </div>
+        <div class="keyEnter">
+        </div>
+    </div>
+    <script src="./js/flexible.js"></script>
+    <script src="./js/stack.js"></script>
+    <script src="./js/compute.js"></script>
+    <script src="js/itemRegister.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+<script>
+    // 只有当电脑打开，.con的宽度为10rem
+    if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+    } else {
+        document.querySelector('.con').style.width='10rem';
+    }
+</script>
+</html>

@@ -1,0 +1,146 @@
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+.con {
+    min-width: 320px;
+    /*body居中*/
+    margin: 0 auto;
+    /*width: 100%;*/
+    height: 100%;
+    padding: 2px 4px;
+}
+/* 显示模块 */
+.show {
+    position: relative;
+    height: 40%;
+}
+
+.formula,
+.history {
+    font-size: .5rem;
+}
+
+.formula {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 9rem;
+    word-wrap: break-spaces;
+    transform: translate(-50%, -50%);
+}
+
+.result {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 9rem;
+    /* 文本太长显示省略号 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+/* 键盘模块 */
+.keyEnter {
+    height: 60%;
+}
+
+.keyEnter ul {
+    display: flex;
+    height: 100%;
+    flex-flow: row wrap;
+}
+
+.keyEnter li {
+    flex: 25%;
+    position: relative;
+    overflow: hidden;
+    min-height: .6rem;
+    /* 盒子之间的间隔 */
+    padding: 2px;
+    background-clip: content-box;
+    cursor: pointer;
+}
+
+.keyEnter [data-type='operator'] {
+    background-clip: content-box;
+}
+
+.keyEnter [data-basic='equal'] {
+    flex: 100%;
+}
+
+.keyEnter span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: .8em;
+    width: 50%;
+    font-size: .5rem;
+    font-weight: 700;
+}
+
+li:hover span {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%) scale(1.3);
+    transform-origin: center 1em;
+    font-weight: 400;
+}
+/* color */
+/* 显示面板式子的颜色 */
+.formula,
+.history {
+    color: rgba(180, 217, 206,0.5);
+
+}
+/* 键盘中的数字、运算符颜色 */
+.keyEnter span {
+    color: rgb(180, 217, 206,0.8);
+}
+.result{
+    color: rgb(14, 38, 27);
+}
+/* body背景颜色 */
+body {
+    background-color: rgb(14, 38, 27);
+}
+/* 显示面板颜色 */
+.show {
+    background-color: rgb(77, 115, 101);
+}
+
+/* 显示面板历史背景的颜色 */
+.history {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* 显示面板结果的背景颜色 */
+.result{
+    background-color: rgb(180, 217, 206,0.5);
+}
+
+/* 按键的背景颜色 */
+.keyEnter li {
+    background-color: rgb(33, 64, 49);
+
+}
+/* 按键中运算符的背景颜色 */
+.keyEnter [data-type='operator'] {
+    background-color: rgba(33, 64, 49,0.8);
+
+}
