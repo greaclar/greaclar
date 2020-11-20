@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    width: 100wh;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -79,8 +79,8 @@ li{
 .arrow::before{
     content: '';
     position: absolute;
-    width: 0.8rem;
-    height: 0.8rem;
+    width: .8rem;
+    height: .8rem;
     background: rgb(3, 38, 18);
     left: 1.5rem;
     bottom: -0.4rem;
@@ -103,6 +103,11 @@ li{
 .meau-box{
     position: relative;
     width: 300px;
+}
+
+.meau{
+    overflow: hidden;
+    border-radius:10px;
 }
 
 /* 主板块的毛玻璃背景 */
@@ -143,16 +148,13 @@ li{
     z-index: -1;
 }
 
-.meau{
-    overflow: hidden;
-    border-radius:10px;
-}
+
 /* ------------------------------------菜单标题板块------------------------------------ */
 .item-head,
 .item-body a{
     position: relative;
     display: block;
-    padding: 0.8rem 1rem;
+    padding: .8rem 1rem;
     color:rgb(187, 187, 187);
     cursor: pointer;
 }
@@ -168,13 +170,13 @@ li{
 
 .item-body a{
     margin: 4px 0;
-    font-size: 0.8rem;
+    font-size: .8rem;
 }
 
 .item-body{
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all .5s ease;
 }
 
 .item-body[flod = '0']{
@@ -183,7 +185,7 @@ li{
 
 /* 让被点击的.item-body在最大高度范围内，自适应撑开 */
 .item-body[flod = '1']{
-    transition: all 0.3s ease 150ms;
+    transition: all .3s ease 150ms;
     max-height: 100rem;
 }
 
