@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+    <meta charset="utf-8"/>
+    <meta name="Keywords" content="greaclar-小龟壳、前端小项目展示、前端计算器"/>
+    <meta name="description" content="greaclar-小龟壳，标准计算器的前端实现，可以进行简单的加、减、乘、除、求余、括号运算。
+    使用面向对象的编程思想，实现了栈，并进行后缀表达式的转换。同时把运算符、编辑符看作对象，其相关的处理函数，作为该对象的行为进行绑定。
+    简化了对用户输入时非法输入的判断，让代码模块化更清晰，易于增减功能。
+    用tofix()方法解决了js特有的小数精度问题。简单修改了一下淘宝的flexible.js，适配电脑和手机页面。
+    希望能与爱好前端的小伙伴一起学习交流，弄点更有意思的东西。-xust"/>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+
+    <link rel="shortcut icon" href="greater.svg" type="image/x-icon">
+    <title>标准计算器</title>
+</head>
+
+
+<body>
+<div class="con">
+    <!-- 显示面板模块 -->
+    <div class="show">
+        <!-- tips模块 -->
+        <div class="tips" level="0">
+            <div class="tips1"></div>
+            <div class="tips2"></div>
+        </div>
+        <!--    公式和结果模块    -->
+        <div class="formula"></div>
+        <div class="result"></div>
+    </div>
+    <!-- 按键模块 -->
+    <div class="keyEnter">
+    </div>
+</div>
+<script src="js/flexible.js"></script>
+<script src="js/classModel.js"></script>
+<script src="js/compute.js"></script>
+<script src="js/itemRegister.js"></script>
+<script src="js/instance.js"></script>
+<script src="js/routine.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
