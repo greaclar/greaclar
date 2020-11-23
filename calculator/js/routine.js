@@ -54,7 +54,7 @@ function previousResult(trimArr, notClone, addition) {
         // 深复制传入的实参原数组对象(中缀表达式)
         trimArr = trimArr.slice(0)
         // 当传入了addition，（0也会识别为false）把addition追加到深复制的数组里（键入数字，得出预览结果使用）
-        if(arguments.length===3){
+        if(arguments.length===3 && addition !== bracketRObj){
             trimArr.push(addition)
         }
         // addition &&
