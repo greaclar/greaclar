@@ -8,7 +8,7 @@
     function setBodyFontSize() {
         // 如果找到页面中body标签，立即设置body的字体大小
         if (document.body) {
-            document.body.style.height = window.innerHeight + 'px';
+            
             document.body.style.fontSize = (12 * dpr) + 'px';
         } else {
             // 如果页面中未加载好body标签，则等待DOM元素加载完毕再去触发一次本次函数
@@ -29,7 +29,7 @@
         }
 
         docEl.style.fontSize = rem + 'px';
-
+        document.body.style.height = window.innerHeight + 'px';
         // // 获取视口高度，乘以1%得到一个vh单位的值
         // let vh = window.innerHeight * 0.01;
         // // 将`--vh`自定义属性中的值设置为文档的根目录一个属性
