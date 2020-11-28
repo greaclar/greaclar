@@ -40,3 +40,8 @@ window.addEventListener('load', function () {
         ele.setAttribute('flod', '0')
     }
 })
+
+// 获取视口高度，乘以1%得到一个vh单位的值
+let vh = window.innerHeight * 0.01;
+// 将`--vh`自定义属性中的值设置为文档的根目录一个属性
+document.documentElement.style.setProperty('--vh', vh + 'px');
