@@ -27,7 +27,12 @@
             rem = (rem >= 80) ? 80 : rem;
         }
 
-        docEl.style.fontSize = rem + 'px'
+        docEl.style.fontSize = rem + 'px';
+
+        // 获取视口高度，乘以1%得到一个vh单位的值
+        let vh = window.innerHeight * 0.01;
+        // 将`--vh`自定义属性中的值设置为文档的根目录一个属性
+        document.documentElement.style.setProperty('--vh', vh + 'px');
     }
 
     setRemUnit()
@@ -69,7 +74,3 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
     }
 }
 
-// 获取视口高度，乘以1%得到一个vh单位的值
-let vh = window.innerHeight * 0.01;
-// 将`--vh`自定义属性中的值设置为文档的根目录一个属性
-document.documentElement.style.setProperty('--vh', vh + 'px');
