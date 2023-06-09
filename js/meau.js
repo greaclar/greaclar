@@ -23,6 +23,8 @@ window.addEventListener('load', function () {
         })
     }
 
+    itemHeads[0].click();
+
     // 把传入的所有元素调用一次flod函数
     function flodAll(eles) {
         for (let i = 0; i < eles.length; i++) {
