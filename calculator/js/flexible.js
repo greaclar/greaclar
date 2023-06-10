@@ -29,7 +29,7 @@
         }
 
         docEl.style.fontSize = rem + 'px';
-        document.body.style.height = window.innerHeight + 'px';
+        // document.body.style.height = window.innerHeight + 'px';
         // // 获取视口高度，乘以1%得到一个vh单位的值
         // let vh = window.innerHeight * 0.01;
         // // 将`--vh`自定义属性中的值设置为文档的根目录一个属性

@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener('load', function windowFirstLoad() {
     const meau = document.querySelector('.meau');
     const itemHeads = meau.querySelectorAll('.item-head');
     const itemBodys = meau.querySelectorAll('.item-body');
@@ -24,6 +24,7 @@ window.addEventListener('load', function () {
     }
 
     itemHeads[0].click();
+    window.removeEventListener('load', windowFirstLoad)
 
     // 把传入的所有元素调用一次flod函数
     function flodAll(eles) {
