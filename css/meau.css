@@ -1,32 +1,37 @@
 /* ------------------------------------重置默认样式------------------------------------ */
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     font-style: normal;
 }
 
-html{
+html {
     font-size: 22px;
     font-size: calc(22px + 0.2vw);
-    
+
 }
-@media (min-width: 1800px) { 
-    html{
+
+@media (min-width: 1800px) {
+    html {
         font-size: 30px;
     }
 }
+
 /* 隐藏 Chrome、Safari 和 Opera 的滚动条 */
 html::-webkit-scrollbar {
     display: none;
 }
+
 /* 隐藏 IE、Edge 和 Firefox 的滚动条 */
 html {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-body{
+body {
     width: 100vw;
     height: calc(var(--vh, 1vh) * 100);
     height: 100vh;
@@ -35,7 +40,7 @@ body{
 /* 去除列表的默认样式 */
 ol,
 ul,
-li{
+li {
     list-style: none;
 }
 
@@ -43,12 +48,17 @@ li{
 @font-face {
     font-family: 'textfont';
     font-display: swap;
-    src: url('../fonttext/webfont.eot'); /* IE9 */
-    src: url('../fonttext/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonttext/webfont.woff2') format('woff2'),
-    url('../fonttext/webfont.woff') format('woff'), /* chrome、firefox */
-    url('../fonttext/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../fonttext/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+    src: url('../fonttext/webfont.eot');
+    /* IE9 */
+    src: url('../fonttext/webfont.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonttext/webfont.woff2') format('woff2'),
+        url('../fonttext/webfont.woff') format('woff'),
+        /* chrome、firefox */
+        url('../fonttext/webfont.ttf') format('truetype'),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url('../fonttext/webfont.svg#webfont') format('svg');
+    /* iOS 4.1- */
 }
 
 /* 文本字体样式 */
@@ -82,18 +92,18 @@ li{
 
 /* --------------------------------------自定义模块样式--------------------------------------- */
 /* 黑色背景 */
-.blackBg{
+.blackBg {
     background-color: rgb(0, 0, 0);
 
 }
 
 /* 文本居中 */
-.textCenter{
+.textCenter {
     text-align: center;
 }
 
 /* 显示在左下角的倒三角 */
-.arrow::before{
+.arrow::before {
     content: '';
     position: absolute;
     width: .8rem;
@@ -106,7 +116,7 @@ li{
 }
 
 /* --------------版心，占满整个屏幕，内部为弹性布局，且只有一个子元素--------------- */
-.centre{
+.centre {
     height: 100%;
     width: 100%;
     display: flex;
@@ -117,102 +127,121 @@ li{
 }
 
 /* ------------------------------------菜单板块------------------------------------ */
-.meau-box{
+.meau-box {
     position: relative;
     width: 300px;
     min-width: 320px;
     width: calc(300px + 3vw);
-    
+
 }
-@media (min-width: 1800px) { 
-    .meau-box{
+
+@media (min-width: 1800px) {
+    .meau-box {
         width: 400px;
     }
 }
 
 /* 主板块的毛玻璃背景 */
-.meau-box::after{
+.meau-box::after {
     content: '';
     /* 定位剧中 */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     /* 比属主大一点，且被属主盖住，起装饰边框作用 */
     height: calc(100% + 3px);
     width: calc(100% + 3px);
     background: linear-gradient(to top right,
-    #468C73
-    ,#A61C1C);
+            #468C73, #A61C1C);
     filter: blur(1px);
     z-index: -2;
 }
 
 /* 主板块的渐变色背景 */
-.meau-box::before{
+.meau-box::before {
     content: '';
     /* 定位剧中 */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     /* 比属主大一点，且被属主盖住，起装饰边框作用 */
     height: calc(100% + 5px);
     width: calc(100% + 5px);
-    background:linear-gradient(to top right
-    ,rgb(70, 140, 115)
-    ,rgba(70, 140, 115,0.5)
-    ,rgba(0, 0, 0,0)
-    ,rgba(166, 28, 28,0.5)
-    ,rgb(166, 28, 28));
+    background: linear-gradient(to top right, rgb(70, 140, 115), rgba(70, 140, 115, 0.5), rgba(0, 0, 0, 0), rgba(166, 28, 28, 0.5), rgb(166, 28, 28));
     z-index: -1;
 }
 
-.meau{
+.meau {
     overflow: hidden;
-    border-radius:10px;
+    border-radius: 10px;
 }
+
 /* ------------------------------------菜单标题板块------------------------------------ */
 .item-head,
-.item-body a{
+.item-body a,
+.item-body .description {
     position: relative;
     display: block;
     padding: .8rem 1rem;
-    color:rgb(187, 187, 187);
+    color: rgb(187, 187, 187);
     cursor: pointer;
 }
 
-.item-head{
+.item-body .description {
+    text-align: justify;
+    pointer-events: none;
+}
+
+.item-head {
     z-index: 1;
     font-size: 1rem;
     background-color: rgb(3, 38, 18);
 }
 
-.item-head span{
+.item-head span,
+.item-body .description {
     margin-right: .2rem;
 }
 
-.item-body a{
+.item-body a,
+.item-body .description {
     margin: 4px 0;
     font-size: .8rem;
 }
 
-.item-body{
+.item-body {
     max-height: 0;
     background-color: rgba(0, 0, 0, 0.6);
     overflow: hidden;
     transition: all .5s ease-out;
 }
 
-.item-body[flod = '0']{
+.item-body[flod='0'] {
     max-height: 0;
     background-color: rgba(0, 0, 0, 0.6);
     filter: blur(7px);
 
 }
 
+.meau-title-tab {
+    text-align: center;
+    font-weight: 900;
+}
+
+.item-body .row-item-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.row-item-box a {
+    flex: 0 0 auto;
+}
+
 /* 让被点击的.item-body在最大高度范围内，自适应撑开 */
-.item-body[flod = '1']{
+.item-body[flod='1'] {
     max-height: 100rem;
     transition-delay: 80ms;
     background-color: rgba(0, 0, 0, 0);
@@ -220,19 +249,22 @@ li{
 }
 
 /* ------------------------------------图标自定义样式------------------------------------ */
-.meau li:nth-child(1) span{
+.meau li:nth-child(1) span {
     font-size: 1.3em;
-    color:rgb(63, 147, 176);
+    color: rgb(63, 147, 176);
 }
-.meau li:nth-child(2n+2) span{
+
+.meau li:nth-child(2n+2) span {
     font-size: 1.1em;
-    color:rgb(189, 142, 62);
+    color: rgb(189, 142, 62);
 }
-.meau li:nth-child(2n+3) span{
+
+.meau li:nth-child(2n+3) span {
     font-size: 1.1em;
-    color:rgb(87, 146, 66);
+    color: rgb(125, 183, 36);
 }
+
 /* 偶尔收起有1px的间隔bug */
-.meau li:nth-child(n+2) .item-head{
+.meau li:nth-child(n+2) .item-head {
     margin-top: -1px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
@@ -15,6 +16,7 @@
     <script src="./js/meau.js"></script>
     <title>greaclar</title>
 </head>
+
 <body class="blackBg">
     <section class="guider"></section>
     <!-- 中心板块 -->
@@ -22,15 +24,19 @@
         <section class="meau-box web-font">
             <ul class="meau">
                 <!-- 顶部标题 -->
-                <li class="meau-item">
+                <li class="meau-item meau-title-tab">
                     <section class="item-head arrow textCenter web-font">
                         <span class="iconfont">&#xe698;</span>
                         <strong>欢迎访问小龟壳站！</strong>
                     </section>
                     <nav class="item-body">
                         <a href="https://blog.csdn.net/weixin_50794208">分享 | 乐趣 | 我的博客</a>
-                        <a href="https://gitee.com/greaclar">我的gitee</a>
-                        <a href="mailto:greaclar@163.com">点击发送邮箱：<br/>greaclar@163.com</a>
+                        <section class="row-item-box">
+                            <a href="https://juejin.cn/user/1040597260448079/posts">我的juejin</a>
+                            <a href="https://gitee.com/greaclar">我的gitee</a>
+                        </section>
+
+                        <a href="mailto:greaclar@163.com">点击发送：greaclar@163.com</a>
                         <!-- <a href="greaclar/test/image.html">end</a> -->
                     </nav>
                 </li>
@@ -45,17 +51,17 @@
                     </section>
                     <!-- 选项体 -->
                     <nav class="item-body web-font">
-                        <a href="./fdq/fdq.html">
-                            <span class="iconfont">&#xe881;</span>
-                            <i>太极主题</i>
-                        </a>
-                        <a href="./fdq/skyfdq.html">
-                            <span class="iconfont">&#xe881;</span>
-                            <i>星空主题</i>
-                        </a>
-                        <a href="#">点击每个块，会转变其状态</a>
-                        <a href="#">点击一个块，周围块也会被影响</a>
-                        <a href="#">当全部块变成白色，即过关</a>
+                        <section class="row-item-box">
+                            <a href="./fdq/fdq.html">
+                                <span class="iconfont">&#xe881;</span>
+                                <i>太极主题</i>
+                            </a>
+                            <a href="./fdq/skyfdq.html">
+                                <span class="iconfont">&#xe881;</span>
+                                <i>星空主题</i>
+                            </a>
+                        </section>
+                        <p class="description">点击每个块，会转变其状态，周围块也会被影响。<br/>当全部块变成白色，即过关！</p>
                     </nav>
                 </li>
                 <li class="meau-item">
@@ -80,8 +86,10 @@
                             <span class="iconfont">&#xe881;</span>
                             <i>物件锦囊</i>
                         </a>
-                        <a href="#">测试账号：a@a.cn</a>
-                        <a href="#">密码：123456</a>
+                        <p class="description">
+                            测试账号：a@a.cn<br/>
+                            密码：123456
+                        </p>
                     </nav>
                 </li>
                 <li class="meau-item">
@@ -109,6 +117,7 @@
             </ul>
         </section>
     </article>
-    
+
 </body>
+
 </html>
